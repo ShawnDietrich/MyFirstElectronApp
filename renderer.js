@@ -1,0 +1,10 @@
+const information = document.getElementById('info');
+
+information.innerHTML = `This app is using Chrome (v${versions.chrome()}), Node.js (v${versions.node()}), and Electron (v${versions.electron()}). My name is ${versions.myName}.`;
+
+const func = async () => {
+  const response = await window.versions.ping()
+  console.log(response) // prints out 'pong'
+}
+
+func()
