@@ -1,5 +1,7 @@
 const {app, BrowserWindow, ipcMain} = require('electron/main')
 const path = require('node:path')
+require('update-electron-app')
+
 /**
  * A function to create a new browser window and load the index.html file.
  */

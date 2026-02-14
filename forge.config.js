@@ -6,13 +6,22 @@ module.exports = {
     asar: true,
   },
   rebuildConfig: {},
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'ShawnDietrich',
+          name: 'MyFirstElectronApp',
+        },
+        prerelease: false,
+        draft: true,
+      }
+    }
+  ],
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {
-        certificateFile: 'cert.pfx',
-        certificatePassword: process.env.CERT_PASSWORD,
-      },
     },
     {
       name: '@electron-forge/maker-zip',
